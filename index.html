@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10251d">
+  <meta name="description" content="Jem M Salafiya R AI - Islamic learning assistant">
+  <title>Jem M Salafiya R AI</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-icon">☪</div>
+    <div class="brand">
+      <h1>Jem M Salafiya R AI</h1>
+      <p>Islamic Learning Assistant</p>
+    </div>
+    <span class="status"><span></span> AI</span>
+  </header>
+
+  <main class="container">
+    <section class="welcome">
+      <div class="welcome-symbol">﷽</div>
+      <h2>Assalamu Alaikum</h2>
+      <p>
+        Learn about the Quran, tafsir, Hadith, Islamic worship,
+        and Islamic history.
+      </p>
+    </section>
+
+    <section class="date-card">
+      <div>
+        <span class="small-label">TODAY'S DATE</span>
+        <p id="gregorianDate">Loading date…</p>
+      </div>
+      <div class="hijri">
+        <span class="small-label">HIJRI DATE</span>
+        <p id="hijriDate">Loading date…</p>
+      </div>
+    </section>
+
+    <section class="language-card">
+      <label for="language">Choose answer language</label>
+      <select id="language">
+        <option value="English">English</option>
+        <option value="Arabic">العربية</option>
+        <option value="Amharic">አማርኛ</option>
+        <option value="Afaan Oromoo">Afaan Oromoo</option>
+      </select>
+    </section>
+
+    <section class="chat-card">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">ASK YOUR QUESTION</span>
+          <h2>Islamic AI Assistant</h2>
+        </div>
+        <span class="moon">☾</span>
+      </div>
+
+      <div class="suggestions">
+        <button class="suggestion" data-question="Explain Surah Al-Fatiha with its meaning and tafsir.">
+          📖 Quran & Tafsir
+        </button>
+        <button class="suggestion" data-question="Explain the conditions of authentic Hadith and give a reliable example.">
+          📚 Hadith
+        </button>
+        <button class="suggestion" data-question="Explain how to perform the five daily prayers according to authentic evidence.">
+          🕌 Salah
+        </button>
+        <button class="suggestion" data-question="Explain the Hijri calendar and how its dates are determined.">
+          🌙 Hijri Calendar
+        </button>
+      </div>
+
+      <form id="chatForm">
+        <label for="question">Your question</label>
+        <textarea
+          id="question"
+          rows="4"
+          maxlength="6000"
+          placeholder="Ask an Islamic question..."
+          required
+        ></textarea>
+
+        <button type="submit" id="sendButton" class="send-button">
+          <span id="sendText">Ask Jem AI</span>
+          <span aria-hidden="true">➤</span>
+        </button>
+      </form>
+
+      <div id="message" class="message" role="status" aria-live="polite"></div>
+
+      <section id="answerSection" class="answer-section" hidden>
+        <div class="answer-heading">
+          <h3>Answer</h3>
+          <button id="copyButton" type="button" class="copy-button">
+            Copy answer
+          </button>
+        </div>
+        <div id="answer" class="answer-text"></div>
+        <p class="disclaimer">
+          Please verify important Quran references, Hadith grades,
+          and personal religious rulings with reliable sources or a
+          qualified scholar.
+        </p>
+      </section>
+    </section>
+
+    <section class="resources">
+      <h2>Trusted research links</h2>
+      <a href="https://quran.com/" target="_blank" rel="noopener noreferrer">
+        <span>📖</span>
+        <span><strong>Quran.com</strong><small>Read and listen to the Quran</small></span>
+        <span>↗</span>
+      </a>
+      <a href="https://sunnah.com/" target="_blank" rel="noopener noreferrer">
+        <span>📚</span>
+        <span><strong>Sunnah.com</strong><small>Search Hadith collections</small></span>
+        <span>↗</span>
+      </a>
+      <a href="https://www.islamweb.net/" target="_blank" rel="noopener noreferrer">
+        <span>🔎</span>
+        <span><strong>Islamweb</strong><small>Islamic articles and questions</small></span>
+        <span>↗</span>
+      </a>
+    </section>
+
+    <p class="footer">
+      Jem M Salafiya R AI · Learn Islam with care and reliable evidence.
+    </p>
+  </main>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>
