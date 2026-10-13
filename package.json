@@ -1,0 +1,14 @@
+{
+  "name": "jem-m-salafiya-r-ai",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "vite": "^6.4.1"
+  },
+  "devDependencies": {}
+}
