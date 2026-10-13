@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#062b20">
+  <meta name="description"
+    content="Jem M Salafiya R AI — Islamic learning, Quran and Hijri calendar.">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/style.css">
+  <title>Jem M Salafiya R AI</title>
+</head>
+<body>
+  <header class="top">
+    <div class="brand">☪ Jem M Salafiya R AI</div>
+    <div class="subtitle">Islamic Knowledge • Quran • Hijri Calendar</div>
+  </header>
+
+  <nav class="tabs">
+    <button data-page="chat" class="tab active">AI Chat</button>
+    <button data-page="quran" class="tab">Al-Quran</button>
+    <button data-page="calendar" class="tab">Hijri Calendar</button>
+  </nav>
+
+  <main>
+    <section id="chat" class="page active">
+      <h2>Ask an Islamic Question</h2>
+      <label for="language">Choose language / ቋንቋ ምረጥ</label>
+      <select id="language">
+        <option value="English">English</option>
+        <option value="Arabic">العربية</option>
+        <option value="Amharic">አማርኛ</option>
+        <option value="Afaan Oromoo">Afaan Oromoo</option>
+      </select>
+
+      <div id="chatMessages" class="messages" aria-live="polite">
+        <div class="bubble bot">
+          Assalamu Alaikum! Ask an Islamic question.
+          السلام عليكم ورحمة الله وبركاته
+        </div>
+      </div>
+
+      <form id="chatForm">
+        <textarea id="question" rows="3" maxlength="4000"
+          placeholder="Write your Islamic question..." required></textarea>
+        <button class="primary" id="sendBtn" type="submit">
+          Send Question
+        </button>
+      </form>
+      <p class="note">
+        Answers are AI-generated. Verify important religious rulings
+        with qualified scholars and reliable sources.
+      </p>
+    </section>
+
+    <section id="quran" class="page">
+      <h2>القرآن الكريم — Al-Quran</h2>
+      <p>Select a Surah to read the Arabic Quran.</p>
+      <label for="surahSelect">Surah</label>
+      <select id="surahSelect">
+        <option value="1">Loading Surahs...</option>
+      </select>
+      <button id="loadSurah" class="primary">Read Surah</button>
+      <div id="quranContent" class="quran"></div>
+      <p class="note">
+        Translations and tafsir must be selected from verified,
+        available sources. This initial version displays Arabic text.
+      </p>
+    </section>
+
+    <section id="calendar" class="page">
+      <h2>Hijri Calendar — التقويم الهجري</h2>
+      <p>Today's Gregorian date:</p>
+      <div id="gregorianDate" class="date-card">Loading...</div>
+      <p>Hijri date:</p>
+      <div id="hijriDate" class="date-card">Loading...</div>
+      <p class="note">
+        Hijri dates may differ by one day depending on local moon
+        sighting and the calendar method.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Jem M Salafiya R AI</p>
+    <p>Built for Islamic learning</p>
+  </footer>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
