@@ -1,0 +1,13 @@
+{
+  "id": "/",
+  "name": "Jem M Salafiya R AI",
+  "short_name": "Jem Salafiya AI",
+  "description": "Islamic learning assistant",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f3f5f0",
+  "theme_color": "#10251d",
+  "lang": "en",
+  "categories": ["education", "books", "lifestyle"]
+}
