@@ -1,0 +1,193 @@
+
+:root {
+  color-scheme: dark;
+  --bg: #11110f;
+  --panel: #1c1c18;
+  --gold: #d7b65e;
+  --gold-light: #f2dda0;
+  --text: #f7f4ea;
+  --muted: #b7b3a7;
+  --border: #3b382d;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background: radial-gradient(ellipse at top, #302515, transparent 45%), var(--bg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Noto Sans Ethiopic", Arial, sans-serif;
+}
+
+button, select, textarea { font: inherit; }
+button { cursor: pointer; }
+
+.app {
+  width: min(100%, 850px);
+  min-height: 100vh;
+  margin: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  color: #17140c;
+  background: linear-gradient(135deg, var(--gold-light), #a77b23);
+  font-size: 27px;
+}
+
+.brand-text { flex: 1; min-width: 0; }
+h1 { margin: 0; font-size: 18px; color: var(--gold-light); overflow-wrap: anywhere; }
+#subtitle { margin: 4px 0 0; font-size: 12px; color: var(--muted); }
+
+#language {
+  max-width: 125px;
+  padding: 9px 6px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--panel);
+  color: var(--text);
+}
+
+.welcome { padding: 25px 8px 20px; text-align: center; }
+.bismillah { font-size: 38px; color: var(--gold); }
+.welcome h2 { color: var(--gold-light); font-size: 23px; margin: 10px 0; }
+.welcome p { max-width: 540px; margin: auto; color: var(--muted); line-height: 1.8; }
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.suggestion {
+  padding: 10px 13px;
+  border: 1px solid #64512b;
+  border-radius: 999px;
+  color: var(--gold-light);
+  background: #211e15;
+  font-size: 13px;
+}
+
+.suggestion:hover { background: #332a17; }
+
+.chat { display: flex; flex-direction: column; gap: 16px; padding: 8px 0 18px; }
+.message { display: flex; align-items: flex-start; gap: 9px; }
+.message.user { flex-direction: row-reverse; }
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  border-radius: 11px;
+  color: var(--gold-light);
+  background: #302816;
+}
+
+.bubble {
+  max-width: calc(100% - 43px);
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  background: var(--panel);
+  overflow-wrap: anywhere;
+  line-height: 1.8;
+}
+
+.message.user .bubble { background: #292518; border-color: #63512a; }
+.bubble strong { display: block; margin-bottom: 5px; color: var(--gold-light); font-size: 13px; }
+.bubble p { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+
+.status { min-height: 22px; margin: 0 0 7px; color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
+.status.error { color: #ffaaaa; }
+
+.composer {
+  position: sticky;
+  bottom: 8px;
+  display: flex;
+  align-items: flex-end;
+  gap: 9px;
+  padding: 10px;
+  border: 1px solid #65532e;
+  border-radius: 17px;
+  background: var(--panel);
+}
+
+.composer textarea {
+  width: 100%;
+  min-height: 42px;
+  max-height: 150px;
+  resize: vertical;
+  padding: 10px 4px;
+  border: 0;
+  outline: none;
+  color: var(--text);
+  background: transparent;
+  line-height: 1.6;
+}
+
+.composer textarea::placeholder { color: #918d80; }
+
+#sendButton {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  border: 0;
+  border-radius: 13px;
+  background: linear-gradient(135deg, var(--gold-light), #bd9135);
+  color: #17140c;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#sendButton:disabled { opacity: .5; cursor: wait; }
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 12px;
+}
+
+.footer p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.6; }
+.clear-button {
+  padding: 7px 10px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  color: var(--gold-light);
+  background: transparent;
+  font-size: 12px;
+}
+
+@media (max-width: 480px) {
+  .app { padding: 12px 10px 20px; }
+  h1 { font-size: 15px; }
+  .brand-icon { width: 40px; height: 40px; }
+  #language { max-width: 100px; font-size: 12px; }
+  .welcome h2 { font-size: 20px; }
+  .suggestion { padding: 9px 10px; font-size: 12px; }
+}
